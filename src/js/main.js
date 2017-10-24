@@ -1,4 +1,4 @@
-require('../css/style.less')
+// require('../css/style.less')
 var $ = require('jquery') // commons js
 var feature = require('./feature.js')
 

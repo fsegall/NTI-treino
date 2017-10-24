@@ -1,8 +1,13 @@
 var path = require('path')
-
+var Extractor = require('extract-text-webpack-plugin')
 module.exports = {
-    entry: './src/js/main.js',
-
+    entry: {
+        main: './src/js/main.js',
+        styles: './src/css/style.less'
+    },
+    externals: {
+        jquery:"jQuery"
+    },
 
     output: {
         filename: '[name].js',
@@ -13,18 +18,25 @@ module.exports = {
 
     module: {
         rules: [
+            /*
             { 
                 test: /\.css$/i,
                 loaders: ['style-loader', 'css-loader']
-            },
+            },*/
             { 
                 test: /\.less$/i,
-                loaders: ['style-loader', 'css-loader', 'less-loader']
+                loader: Extractor.extract({ use:['css-loader', 'less-loader']  }) 
             }, {
                 test: /\.(svg|woff|ttf|eot|woff2)$/i,
-                loaders: ['file-loader?name=fonts/[name].[ext]']
+                loaders: ['file-loader?name=fonts/[name].[hash:base64:5].[ext]']
             }
         ]
-    }
+    },
+    
+    plugins: [
+        new Extractor({
+            filename: '[name].css', allChunks:true
+        })
+    ]
 }
 
