@@ -1,7 +1,8 @@
 module.exports = {
     entry: './src/js/main.js',
     output: {
-        filename: './src/js/saida.js'
+        filename: './src/js/saida.js',
+        publicPath: '/'
     },
     module: {
         rules: [
@@ -14,7 +15,7 @@ module.exports = {
                 loaders: ['style-loader', 'css-loader', 'less-loader']
             }, {
                 test: /\.(svg|woff|ttf|eot|woff2)$/i,
-                loaders: ['file-loader?name=src/fonts//[name].[ext]']
+                loaders: ['file-loader?name=fonts/[name].[ext]']
             }
         ]
     }

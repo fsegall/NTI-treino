@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 1);
@@ -67,7 +67,7 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "src/fonts//glyphicons-halflings-regular.eot";
+module.exports = __webpack_require__.p + "fonts/glyphicons-halflings-regular.eot";
 
 /***/ }),
 /* 1 */
@@ -221,25 +221,25 @@ function toComment(sourceMap) {
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "src/fonts//glyphicons-halflings-regular.woff2";
+module.exports = __webpack_require__.p + "fonts/glyphicons-halflings-regular.woff2";
 
 /***/ }),
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "src/fonts//glyphicons-halflings-regular.woff";
+module.exports = __webpack_require__.p + "fonts/glyphicons-halflings-regular.woff";
 
 /***/ }),
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "src/fonts//glyphicons-halflings-regular.ttf";
+module.exports = __webpack_require__.p + "fonts/glyphicons-halflings-regular.ttf";
 
 /***/ }),
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "src/fonts//glyphicons-halflings-regular.svg";
+module.exports = __webpack_require__.p + "fonts/glyphicons-halflings-regular.svg";
 
 /***/ }),
 /* 9 */

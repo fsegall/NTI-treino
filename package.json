@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Projeto do treinamento",
   "scripts": {
-    "dev": "serve ./src",
+    "dev": "serve .",
     "watch": "webpack --watch"
   },
   "main": "index.js",
