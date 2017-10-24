@@ -1,9 +1,16 @@
+var path = require('path')
+
 module.exports = {
     entry: './src/js/main.js',
+
+
     output: {
-        filename: './src/js/saida.js',
-        publicPath: '/'
+        filename: '[name].js',
+        path: path.resolve('./dist'),
+        publicPath: 'dist/'
     },
+
+
     module: {
         rules: [
             { 
