@@ -1,10 +1,11 @@
+require('../css/style.less')
 var $ = require('jquery') // commons js
 var feature = require('./feature.js')
 
 console.log($.fn.jquery)
 
-$(body).click(function() {
-    $(this).addClass('red')
+$('body').click(function() {
+    $(this).addClass('.red')
 })
 
 x = feature.add(5,4)
