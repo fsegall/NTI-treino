@@ -5,7 +5,7 @@ var feature = require('./feature.js')
 console.log($.fn.jquery)
 
 $('body').click(function() {
-    $(this).addClass('.red')
+    $(this).addClass('black')
 })
 
 x = feature.add(5,4)
