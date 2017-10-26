@@ -1,17 +1,24 @@
-// require('../css/style.less')
-var $ = require('jquery') // commons js
-var feature = require('./feature.js')
+var $ = require('jquery')
+var FlickrApi = require('./lib/flickr-api')
 
-console.log($.fn.jquery)
+var templatePugPhoto = require('./templates/photo.pug')
 
-/*
-$('body').click(function() {
-    $(this).addClass('black')
+var api = new FlickrApi('026d26f0c2e252ec152c416857ecd75c')
+var $loading = $('.Loading')
+
+$('#input').on('keyup', function (evt) {
+  if (evt.keyCode === 13) {
+    $loading.removeClass('is-hidden')
+    busca($('#input').val()).then(function () {
+      $loading.addClass('is-hidden')
+    })
+  }
 })
-*/
 
-x = feature.add(5,4)
-y = feature.pow(2)
-
-console.log(x)
-console.log(y)
+var busca = function (texto) {
+  return api.search(texto)
+  .then(function (photos) {
+    var html = photos.map(templatePugPhoto)
+    $('#photos').html(html.join(''))
+  })
+}
